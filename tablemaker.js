@@ -94,11 +94,12 @@ for (var week = 1; week <= 3; week++) {
 		);
 	}
 
-	table.append(
-		'<tr><td>' 
-		+ 'more dates...' 
-		+ '</td><td>'
-		+ 'more information coming...'
-		+ '</td></tr>'
-	);
 }
+
+table.append(
+	'<tr><td>' 
+	+ 'more dates...' 
+	+ '</td><td>'
+	+ 'more information coming...'
+	+ '</td></tr>'
+);
