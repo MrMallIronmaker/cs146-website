@@ -46,6 +46,25 @@ var speakers = {
 };
 
 var workshops = {
-	1 : "Unity Boot Camp led by a Riot Games engineer.",
+	1 : {
+		name: "Brad Smith",
+		title: "Unity Crash Course",
+		blurb: 
+		   "Unity is a powerful and easy to use game engine. In this talk, "
+		 + "we'll be cover a wide variety of topics to give you a jump start "
+		 + "using Unity. We'll walk through many of the key pieces of the "
+		 + "engine as we build a small, playable prototype. By the end of this "
+		 + "talk, you should have a good understanding of how to get started "
+		 + "making your own projects with Unity as well as have a broad "
+		 + "vocabulary of the pieces needed to make a game.",
+		intro:
+		   "Brad Smith is a software engineer who has been in the games industry "
+		 + "for over a decade and has been making video games since he "
+		 + "was a kid. He's worked on a lot of fun projects over the "
+		 + "years, starting with Spore and SimCity at Maxis before "
+		 + "moving on to help build Doki Doki Universe at Humanature "
+		 + "Studios. He spent a brief period doing independent "
+		 + "development and currently works at Riot Games."
+	},
 	2 : "Unity Boot Camp led by a Unity engineer"
 }

@@ -35,13 +35,16 @@ function dateEntryString(date) {
 	return dayToDayName[date.getDay()] + ', ' + monthToMonthName[date.getMonth()] + ' ' + date.getDate();
 }
 
+function makeStringFromSpeakerInfo(speakerInfo) {
+	return '<b>' + speakerInfo.name + ', ' + speakerInfo.title + '</b> '
+		  + speakerInfo.blurb + '<br><br>' + speakerInfo.intro;
+}
+
 function speakerAtWeek(week) {
 	var speakerInfo = speakers[week];
 	var htmlSource;
 	if (speakerInfo) {
-		htmlSource = '<b>' + speakerInfo.name + ', ' + speakerInfo.title + '</b> '
-		  + speakerInfo.blurb + '<br><br>' + speakerInfo.intro;
-		
+		htmlSource = makeStringFromSpeakerInfo(speakerInfo)	
 	} else {
 		htmlSource = '<b>TBA, TBA</b> ';
 	}
@@ -51,6 +54,9 @@ function speakerAtWeek(week) {
 
 function workshopAtWeek(week) {
 	var description = workshops[week];
+	if (description.name && description.title && description.blurb && description.intro) {
+		description = makeStringFromSpeakerInfo(description);
+	}
 	if (!workshops[week]) {
 		description = "TA-led working period.";
 	}
